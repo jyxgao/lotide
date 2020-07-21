@@ -11,7 +11,7 @@ const assertEqual = function(actual, expected) {
 };
 
 //TEST CODE
-console.log(assertEqual("Lighthouse Labs", "Bootcamp"));
+console.log(assertEqual("\"Lighthouse Labs\"", "\"Bootcamp\""));
 console.log(assertEqual(1, 1));
-console.log(assertEqual("Rubber ducks", "Rubber ducks"));
+console.log(assertEqual("\"Rubber ducks\"", "\"Rubber ducks\""));
 console.log(assertEqual(3, 5));
