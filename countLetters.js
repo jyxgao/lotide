@@ -9,21 +9,21 @@ const assertEqual = function(actual, expected) {
   return output;
 };
 
+/* Function to count letter instances in an input string, returns an object with the counts*/
 const countLetters = function(message) {
   const result = {};
 
   // Loop over all letters in the input message
   for (const letter of message) {
+    // Count letters that are not spaces
     if (letter !== " ") {
-        if (result[letter]){
-          result[letter] += 1;
-        } else {
-          result[letter] = 1;
-        }
+      if (result[letter]) {
+        result[letter] += 1;
+      } else {
+        result[letter] = 1;
       }
     }
-
-
+  }
   return result;
 };
 
