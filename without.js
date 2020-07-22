@@ -42,7 +42,7 @@ const without = function(source, itemsToRemove) {
   let newArray = [];
   for (let n = 0; n < source.length; n++) {
     newArray.push(source[n]);
-  };
+  }
 
   // look through each element in the source array
   for (let i = 0; i < newArray.length; i++) {

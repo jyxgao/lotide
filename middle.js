@@ -37,12 +37,12 @@ const assertArraysEqual = function(arr1, arr2) {
 const middle = function(arr) {
   let newArray = [];
 
-  if (arr.length > 2 ) {
+  if (arr.length > 2) {
     if (arr.length % 2 === 1) {
-      newArray.push(arr[Math.floor(arr.length / 2)])
+      newArray.push(arr[Math.floor(arr.length / 2)]);
       return newArray;
     } else {
-      newArray.push(arr[(arr.length / 2)-1], arr[(arr.length / 2)]);
+      newArray.push(arr[(arr.length / 2) - 1], arr[(arr.length / 2)]);
       return newArray;
     }
   } else {
