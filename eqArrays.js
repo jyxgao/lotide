@@ -1,4 +1,4 @@
-/* Function that compares two input arrays on whether they are identical */
+/* Function that compares two input values on whether they are identical */
 
 const assertEqual = function(actual, expected) {
   let output = "";
@@ -10,6 +10,7 @@ const assertEqual = function(actual, expected) {
   return output;
 };
 
+/* Function that compares two input arrays on whether they are identical */
 const eqArrays = function(arr1, arr2) {
   // only run the for loop to check array if the number of elements in both match
   if (arr1.length === arr2.length) {
