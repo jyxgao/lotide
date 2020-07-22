@@ -9,14 +9,14 @@ const assertEqual = function(actual, expected) {
   return output;
 };
 
-/* Function that takes in an array of items and an object that specifies which array items to count, 
+/* Function that takes in an array of items and an object that specifies which array items to count,
 outputs an object containing items being counted and how many times they occurred in total */
 const countOnly = function(allItems, itemsToCount) {
   const results = {};
 
-  // loop over allItems 
+  // loop over allItems
   for (const item of allItems) {
-    // check if any of allItems matches ones in itemsToCount 
+    // check if any of allItems matches ones in itemsToCount
     if (itemsToCount[item]) {
       // increment count everytime an item is found
       if (results[item]) {
