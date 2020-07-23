@@ -1,20 +1,18 @@
-/* Function that returns a new array that excludes specified given values from input array. */
-
 /* Function that compares two input arrays on whether they are identical and prints an appropriate message */
 const assertArraysEqual = function(arr1, arr2) {
-  let message = "";
+  // let message = "";
   // only run the for loop to check array if the number of elements in both match
   if (arr1.length === arr2.length) {
     // compare elements of the same index in both arrays see if they are identical
     for (let i = 0; i < arr1.length; i++) {
       if (arr1[i] !== arr2[i]) {
-        return message = "⛔⛔⛔ The arrays are not the same!";
+        console.log("⛔⛔⛔ The arrays are not the same!");
       }
     }
     // message if the two arrays are identical
-    return message = "🐣🐣🐣 Huzzah, the two arrays are identical!";
+    console.log("🐣🐣🐣 Huzzah, the two arrays are identical!");
   } else {
-    return message = "⛔⛔⛔ The arrays are not the same!";
+    console.log("⛔⛔⛔ The arrays are not the same!");
   }
 };
 
@@ -64,11 +62,11 @@ const without = function(source, itemsToRemove) {
 //TEST CODE
 console.log(without([1, 2, 3, 4], [2, 3]));
 console.log(without([50, 14, 2, 20, 4, 5, 2, 20, 10, 5], [5, 20]));
-console.log(assertArraysEqual(without([50, 14, 2, 4, 5, 2, 20, 10, 5], [2, 5]), [50, 14, 4, 20, 10]));
-console.log(assertArraysEqual(without([2, 99, 1, 299, 5, 99, 299], [99, 299]), [2, 1, 5]));
+assertArraysEqual(without([50, 14, 2, 4, 5, 2, 20, 10, 5], [2, 5]), [50, 14, 4, 20, 10]);
+assertArraysEqual(without([2, 99, 1, 299, 5, 99, 299], [99, 299]), [2, 1, 5]);
 
 //TEST to check if original array is changed
 const words = ["hello", "world", "lighthouse"];
 without(words, ["lighthouse"]);
-console.log(assertArraysEqual(words, ["hello", "world", "lighthouse"]));
+assertArraysEqual(words, ["hello", "world", "lighthouse"]);
 

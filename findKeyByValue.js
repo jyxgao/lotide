@@ -1,12 +1,10 @@
 /* Function that compares two input values on whether they are identical */
 const assertEqual = function(actual, expected) {
-  let output = "";
   if (actual === expected) {
-    console.log(output = `🐣🐣🐣 Assertion Passed: ${actual} === ${expected}`);
+    console.log(`🐣🐣🐣 Assertion Passed: ${actual} === ${expected}`);
   } else {
-    console.log(output = `⛔⛔⛔ Assertion Failed: ${actual} !== ${expected}`);
+    console.log(`⛔⛔⛔ Assertion Failed: ${actual} !== ${expected}`);
   }
-  return output;
 };
 
 /* Function that finds a key by value in an object */

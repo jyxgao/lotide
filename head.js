@@ -1,13 +1,10 @@
 /* Function that compares two input values on whether they are identical */
-
 const assertEqual = function(actual, expected) {
-  let output = "";
   if (actual === expected) {
-    output = `🐣🐣🐣 Assertion Passed: ${actual} === ${expected}`;
+    console.log(`🐣🐣🐣 Assertion Passed: ${actual} === ${expected}`);
   } else {
-    output = `⛔⛔⛔ Assertion Failed: ${actual} !== ${expected}`;
+    console.log(`⛔⛔⛔ Assertion Failed: ${actual} !== ${expected}`);
   }
-  return output;
 };
 
 /* Retrieve the first element in an input array */
@@ -16,7 +13,7 @@ const head = function(array) {
   return output;
 };
 
-console.log(assertEqual(head([5, 6, 7]), 5));
-console.log(assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello"));
-console.log(assertEqual(head(["Lighthouse", "Labs"]), "Hello"));
-console.log(assertEqual(head([], undefined)));
+assertEqual(head([5, 6, 7]), 5); // pass
+assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello"); // pass
+assertEqual(head(["Lighthouse", "Labs"]), "Hello"); // failed
+assertEqual(head([], undefined)); // pass
