@@ -55,4 +55,4 @@ assertArraysEqual(results3, ["I", "cannot", "stop", "learning"])
 const data4 = [2, "string1", "string2", "string3", 4, 5]
 const results4 = takeUntil(data4, x => x === "string3");
 console.log(results4)
-assertArraysEqual(results3, [2, "string1", "string2"])
+assertArraysEqual(results4, [2, "string1", "string2"])
