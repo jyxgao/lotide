@@ -42,3 +42,18 @@ const eqObjects = function(obj1, obj2) {
     return false;
   }
 };
+
+/* Function that takes in two objects and console.log whether they are a perfect match */
+const assertObjectsEqual = function(obj1, obj2) {
+  if (eqObjects(obj1, obj2) === false) {
+    console.log("⛔⛔⛔ The Objects are not the same!");
+  } else {
+    console.log("🐣🐣🐣 Huzzah, the two objects are identical!")
+  }
+};
+
+//TEST CODE
+assertObjectsEqual({a: "1", b: "2" }, {b: "2", a: "1" }); // pass
+assertObjectsEqual({c: "1", d: ["2", 3] }, {d: ["2", 3], c: "1"}); // pass
+assertObjectsEqual({ a: "1", c: "3", b: "2",}, { c: "1", d: ["2", 3, 4], a: "2"}); // pass
+assertObjectsEqual({name: "Jan", age: "14"}, {name: "Jan", age: 14}); // pass
