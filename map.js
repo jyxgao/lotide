@@ -7,10 +7,13 @@ const assertArraysEqual = function(arr1, arr2) {
     for (let i = 0; i < arr1.length; i++) {
       if (arr1[i] !== arr2[i]) {
         console.log("⛔⛔⛔ The arrays are not the same!");
+        break;
+      } else {
+        // message if the two arrays are identical
+        console.log("🐣🐣🐣 Huzzah, the two arrays are identical!");
+        break;
       }
     }
-    // message if the two arrays are identical
-    console.log("🐣🐣🐣 Huzzah, the two arrays are identical!");
   } else {
     console.log("⛔⛔⛔ The arrays are not the same!");
   }
