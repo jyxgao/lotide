@@ -1,11 +1,4 @@
-/* Function that compares two input values on whether they are identical */
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`🐣🐣🐣 Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`⛔⛔⛔ Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require("./assertEqual");
 
 /* Function to count letter instances in an input string, returns an object with the counts*/
 const countLetters = function(message) {
@@ -24,6 +17,8 @@ const countLetters = function(message) {
   }
   return result;
 };
+
+module.exports = countLetters;
 
 //TEST CODE
 const message1 = "Today I learned about Objects at Lighthouse Labs";

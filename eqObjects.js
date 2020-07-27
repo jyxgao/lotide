@@ -1,30 +1,5 @@
-/* Function that compares two input values on whether they are identical */
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`🐣🐣🐣 Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`⛔⛔⛔ Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
 /* Function that compares two input arrays on whether they are identical */
-const eqArrays = function(arr1, arr2) {
-  // only run the for loop to check array if the number of elements in both match
-  if (arr1.length === arr2.length) {
-    // compare elements of the same index in both arrays see if they are identical
-    for (let i = 0; i < arr1.length; i++) {
-      // if at least one is not identical, return false
-      if (arr1[i] !== arr2[i]) {
-        return false;
-      }
-    }
-    // return true if there are no mismatch found
-    return true;
-  } else {
-    return false;
-  }
-};
-
+const eqArrays = require('./eqArrays');
 
 /* Function that takes two objects and returns true or false based on perfect match */
 const eqObjects = function(obj1, obj2) {
@@ -51,6 +26,8 @@ const eqObjects = function(obj1, obj2) {
     return false;
   }
 };
+
+module.exports = eqObjects;
 
 //TEST CODE.
 const ab = { a: "1", b: "2" };

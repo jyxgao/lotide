@@ -1,23 +1,5 @@
 /* Function that compares two input arrays on whether they are identical and prints an appropriate message */
-const assertArraysEqual = function(arr1, arr2) {
-  // let message = "";
-  // only run the for loop to check array if the number of elements in both match
-  if (arr1.length === arr2.length) {
-    // compare elements of the same index in both arrays see if they are identical
-    for (let i = 0; i < arr1.length; i++) {
-      if (arr1[i] !== arr2[i]) {
-        console.log("⛔⛔⛔ The arrays are not the same!");
-        break;
-      } else {
-        // message if the two arrays are identical
-        console.log("🐣🐣🐣 Huzzah, the two arrays are identical!");
-        break;
-      }
-    }
-  } else {
-    console.log("⛔⛔⛔ The arrays are not the same!");
-  }
-};
+const assertArraysEqual = require('./assertArraysEqual');
 
 /* Function that take in an array containing array elements, 
 returns a "flattened" version of the array */
@@ -35,9 +17,11 @@ const flatten = function(nestedArray) {
     }
   }
   return newArray;
-}
+};
+
+module.exports = flatten;
 
 // TEST CODE **REQUIRES ASSERTIONS**
-// assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]], [1, 2, 3, 4, 5, 6]));
+// assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
 console.log(flatten([1, 2, [3, 4], 5, [6]])); // => [1, 2, 3, 4, 5, 6]
 console.log(flatten([100, [140, 24, "stranger"], [3, 4], 5, [6]])); // => [ 100, 140, 24, 'stranger', 3, 4, 5, 6 ]

@@ -1,11 +1,4 @@
-/* Function that compares two input values on whether they are identical */
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`🐣🐣🐣 Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`⛔⛔⛔ Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const findKeyByValue = require("./findKeyByValue");
 
 const findKey = function(obj, callback) {
   let keyArray = Object.keys(obj)
@@ -16,6 +9,9 @@ const findKey = function(obj, callback) {
   }
 };
 
+module.exports = findKey;
+
+// TEST
 const result1 = findKey({
   "Blue Hill": { stars: 1 },
   "Akaleri":   { stars: 3 },

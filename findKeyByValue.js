@@ -1,11 +1,4 @@
-/* Function that compares two input values on whether they are identical */
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`🐣🐣🐣 Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`⛔⛔⛔ Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require('./assertEqual');
 
 /* Function that finds a key by value in an object */
 const findKeyByValue = function(obj, val) {
@@ -19,6 +12,8 @@ const findKeyByValue = function(obj, val) {
     }
   }
 };
+
+module.exports = findKeyByValue;
 
 const bestTVShowsByGenre = {
   sci_fi: "The Expanse",
