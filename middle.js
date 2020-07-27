@@ -1,45 +1,7 @@
-/* Function that compares two input arrays on whether they are identical */
-const eqArrays = function(arr1, arr2) {
-  // only run the for loop to check array if the number of elements in both match
-  if (arr1.length === arr2.length) {
-    // compare elements of the same index in both arrays see if they are identical
-    for (let i = 0; i < arr1.length; i++) {
-      // if at least one is not identical, return false
-      if (arr1[i] !== arr2[i]) {
-        return false;
-      }
-    }
-    // return true if there are no mismatch found
-    return true;
-  } else {
-    return false;
-  }
-};
-
-/* Function that compares two input arrays on whether they are identical and prints an appropriate message */
-const assertArraysEqual = function(arr1, arr2) {
-  // let message = "";
-  // only run the for loop to check array if the number of elements in both match
-  if (arr1.length === arr2.length) {
-    // compare elements of the same index in both arrays see if they are identical
-    for (let i = 0; i < arr1.length; i++) {
-      if (arr1[i] !== arr2[i]) {
-        console.log("⛔⛔⛔ The arrays are not the same!");
-        break;
-      } else {
-        // message if the two arrays are identical
-        console.log("🐣🐣🐣 Huzzah, the two arrays are identical!");
-        break;
-      }
-    }
-  } else {
-    console.log("⛔⛔⛔ The arrays are not the same!");
-  }
-};
-
+/* Function that returns the middle number in an array of odd number of elements; 
+2 of the middle numbers in an array of even number of elemetns. */
 const middle = function(arr) {
   let newArray = [];
-
   if (arr.length > 2) {
     if (arr.length % 2 === 1) {
       newArray.push(arr[Math.floor(arr.length / 2)]);
@@ -53,11 +15,4 @@ const middle = function(arr) {
   }
 };
 
-//TEST CODE
-console.log(middle([4]));
-console.log(middle([4, 6]));
-console.log(middle([40, 500, 20, 10]));
-console.log(middle([2, 4, 5, 6, 1, 2, 3]));
-
-assertArraysEqual(middle([40, 500, 20, 10]), [500, 20]);
-assertArraysEqual(middle([2, 4, 5, 6, 1, 2, 3]), [6]);
+module.exports = middle;
