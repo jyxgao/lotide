@@ -1,7 +1,6 @@
-/* Function that compares two input arrays on whether they are identical and prints an appropriate message */
 const assertArraysEqual = require('./assertArraysEqual');
 
-/* Function that take in an array containing array elements, 
+/* Function that takes in an array containing array elements, 
 returns a "flattened" version of the array */
 const flatten = function(nestedArray) {
   let newArray = [];

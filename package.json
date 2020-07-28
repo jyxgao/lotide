@@ -1,8 +1,8 @@
 {
-  "name": "lotide",
+  "name": "@jyxgao/lotide",
   "version": "1.0.0",
-  "description": "",
-  "main": "assertArraysEqual.js",
+  "description": "A mini clone of the [lodash](https://lodash.com) library published as part of my learnings at Lighthouse Labs.",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -18,7 +18,11 @@
     "type": "git",
     "url": "git+https://github.com/jyxgao/lotide.git"
   },
-  "author": "",
+  "author": {
+    "name": "Jenny Gao"
+  , "email": "gao.jenny9@gmail.com"
+  , "url": "https://github.com/jyxgao"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jyxgao/lotide/issues"

@@ -1,5 +1,6 @@
 const findKeyByValue = require("./findKeyByValue");
 
+/* Function that finds the first key of a given value */
 const findKey = function(obj, callback) {
   let keyArray = Object.keys(obj)
   for (let key of keyArray) {
